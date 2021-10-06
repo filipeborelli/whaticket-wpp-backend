@@ -1,0 +1,31 @@
+{
+  "name": "whaticket-wpp-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-node": "^0.0.1-security",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "chalk": "^4.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "dev": "nodemon -w src -w .env --exec \"babel-node src --presets env\"",
+    "build": "rimraf dist && babel src -s -D -d dist --presets env",
+    "start": "node dist"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
